@@ -1,5 +1,5 @@
 {
-  "name": "base-daisyui-tailwind-vue-vite",
+  "name": "fun-facts",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.4",
     "daisyui": "^2.24.0",
     "vue": "^3.2.25"
   },
