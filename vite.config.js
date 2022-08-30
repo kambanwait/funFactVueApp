@@ -9,5 +9,14 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  plugins: [vue()]
+  plugins: [vue()],
+  server: {
+    proxy: {
+      '/.netlify/functions/funfactapi': {
+        target: 'https://fun-fact.netlify.app/.netlify/functions/funfactapi',
+        changeOrigin: true,
+        secure: false,
+      },
+    }
+  }
 })
