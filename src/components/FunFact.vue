@@ -27,18 +27,24 @@ const loadNewFunFact = async () => {
   loadingNewFunFact.value = true
   funFact.value = ''
 
-  const response = await fetch('/.netlify/functions/funfactapi', {
+  await fetch('/.netlify/functions/funfactapi', {
     method: 'GET'
   })
-  .then(response => response.json())
-  .then(response => {
-    funFact.value = response[0].description
-    loadingNewFunFact.value = false
-  })
-  .catch(error => {
-    funFact.value = error
-    loadingNewFunFact.value = false
-  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(response)
+      } else {
+        return response.json()
+      }
+    })
+    .then(response => {
+      funFact.value = response[0].description
+      loadingNewFunFact.value = false
+    })
+    .catch(error => {
+      funFact.value = error
+      loadingNewFunFact.value = false
+    })
 }
 
 const shareIsAllowed = computed(() => navigator.share ? true : false )
