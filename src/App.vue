@@ -11,6 +11,7 @@
     <footer class="flex flex-col gap-2">
       <p class="text-xs text-center opacity-60"><a href="https://www.scriptedpixels.co.uk" target="_blank">Scripted Pixels Ltd</a></p>
       <p class="text-xs text-center opacity-60"><a href="https://github.com/kambanwait/funFactVueApp"  target="_blank">GitHub</a></p>
+      <p class="text-xs text-center opacity-60"><a href="https://daisyui.com"  target="_blank">DaisyUI</a></p>
     </footer>
   </main>
 </template>
