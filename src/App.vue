@@ -7,6 +7,10 @@
         <button class="btn btn-ghost btn-disabled bg-transparent loading btn-xl pulse text-center w-100 text-xl">Loading a Fun Fact...</button>
       </template>
     </Suspense>
+
+    <footer>
+      <p class="text-xs text-center opacity-60"><a href="https://www.scriptedpixels.co.uk" target="_blank">Scripted Pixels Ltd</a></p>
+    </footer>
   </main>
 </template>
 
