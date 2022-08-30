@@ -5,7 +5,7 @@ exports.handler = async function() {
   const URL = `https://random-facts4.p.rapidapi.com/get`
 
   try {
-    const { data } = await axios.get('https://random-facts4.p.rapidapi.com/gets', {
+    const { data } = await axios.get('https://random-facts4.p.rapidapi.com/get', {
       method: 'GET',
       headers: {
         'X-RapidAPI-Key': VITE_API_KEY,
