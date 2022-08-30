@@ -1,6 +1,6 @@
 <template>
   <main class="container max-w-3xl p-2 flex gap-10 flex-col overflow-auto">
-    <h1 class="text-8xl text-center font-bold pulse">Fun Fact!</h1>
+    <h1 class="text-7xl text-center font-bold pulse">Fun Fact!</h1>
     <Suspense>
       <FunFact />
       <template #fallback>
