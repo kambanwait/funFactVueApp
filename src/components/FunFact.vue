@@ -51,7 +51,8 @@ const shareMe = () => {
   if (navigator.share) {
     navigator.share({
       title: 'Fun Fact!',
-      url: 'https://fun-fact.netlify.app'
+      url: 'https://fun-fact.netlify.app',
+      text: funFact.value
     }).then(() => {
       console.log('Thanks for sharing!');
     })
