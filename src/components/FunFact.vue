@@ -27,22 +27,18 @@ const loadNewFunFact = async () => {
   loadingNewFunFact.value = true
   funFact.value = ''
 
-  const response = await fetch('https://random-facts4.p.rapidapi.com/get', {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': 'a9b13ce31bmshc07f729223263fap1b4476jsnc78cd97258c3',
-      'X-RapidAPI-Host': 'random-facts4.p.rapidapi.com'
-    }
+  const response = await fetch('/.netlify/functions/funfactapi', {
+    method: 'GET'
   })
-    .then(response => response.json())
-    .then(response => {
-      funFact.value = response[0].description
-      loadingNewFunFact.value = false
-    })
-    .catch(error => {
-      funFact.value = error
-      loadingNewFunFact.value = false
-    })
+  .then(response => response.json())
+  .then(response => {
+    funFact.value = response[0].description
+    loadingNewFunFact.value = false
+  })
+  .catch(error => {
+    funFact.value = error
+    loadingNewFunFact.value = false
+  })
 }
 
 const shareIsAllowed = computed(() => navigator.share ? true : false )
