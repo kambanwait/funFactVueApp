@@ -26,10 +26,6 @@ exports.handler = async function() {
     }
 
   } catch (error) {
-    const { status, statusText, headers, data } = error.response
-    return {
-      statusCode: error.response.status,
-      body: JSON.stringify({ status, statusText, headers, data })
-    }
+    return error
   }
 }
