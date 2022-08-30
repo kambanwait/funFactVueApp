@@ -8,8 +8,9 @@
       </template>
     </Suspense>
 
-    <footer>
+    <footer class="flex flex-col gap-2">
       <p class="text-xs text-center opacity-60"><a href="https://www.scriptedpixels.co.uk" target="_blank">Scripted Pixels Ltd</a></p>
+      <p class="text-xs text-center opacity-60"><a href="https://github.com/kambanwait/funFactVueApp"  target="_blank">GitHub</a></p>
     </footer>
   </main>
 </template>
